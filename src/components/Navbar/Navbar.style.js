@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const StyledNavbar = styled.div`
 	.main-container {
-		border: 1px solid white;
 		width: 100%;
 		min-height: 6rem;
 		display: flex;
@@ -15,31 +14,31 @@ export const StyledNavbar = styled.div`
 	.icon-container {
 		img {
 			max-height: 5rem;
-			border: 1px solid #fff;
 		}
 	}
 
 	.navbar-container {
-		/* border: 1px dashed white; */
-
 		display: flex;
 		flex-direction: row;
 		height: 100%;
 
-		p {
-			/* border: 1px solid yellow; */
-
+		ul {
+			display: flex;
+			text-decoration: none;
+			list-style: none;
+		}
+		li {
+			text-transform: uppercase;
+			font-weight: 200;
 			color: var(--main-color);
-			padding: 0.5rem 0.5rem;
+			border: 1px solid transparent;
+			padding: 0.2rem 0.2rem;
 			margin: 0 0.2rem;
-			/* border-bottom: 1px solid transparent; */
 			font-size: 1rem;
 		}
-		p:hover {
+		li:hover {
 			border-bottom: 1px solid white;
+			cursor: pointer;
 		}
-	}
-	.login-container {
-		/* border: 1px solid pink; */
 	}
 `;

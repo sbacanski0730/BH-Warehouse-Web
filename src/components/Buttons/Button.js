@@ -1,41 +1,42 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-const StyledButton = styled.div`
+const StyledButton = styled.button`
 	background-color: var(--main-color);
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	justify-content: center;
 	color: var(--bg);
 	padding: 0.5rem 1.3rem;
-	text-transform: uppercase;
-	/* max-width: 116px; */
-	/* max-width: 125px; */
-	/* transition: 1s linear; */
+	border-radius: ${props => (props.isRounded ? '20px' : '0%')};
 	p {
+		text-transform: capitalize;
 		font-size: 1.1rem;
-		transition: 0.1s linear;
+		font-weight: 600;
 	}
 	&:hover {
 		background-color: #d0a571;
 		cursor: pointer;
-		/* width: fit-content; */
-
-		p {
-			font-size: 1.12rem;
-		}
+		width: fit-content;
 	}
 `;
 
-const Button = ({ content }) => {
+const Button = ({ content, isRounded }) => {
 	return (
 		<>
-			<StyledButton>
+			<StyledButton isRounded={isRounded}>
 				<p>{content}</p>
 			</StyledButton>
 		</>
 	);
+};
+
+Button.defaultProps = {
+	content: 'ok',
+	isRounded: true,
+};
+
+Button.propTypes = {
+	content: PropTypes.string.isRequired,
+	isRounded: PropTypes.bool,
 };
 
 export default Button;

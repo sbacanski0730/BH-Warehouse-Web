@@ -1,13 +1,29 @@
-import Navbar from './components/Navbar/Navbar.js';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Navbar from './components/Navbar/Navbar';
 import GlobalStyles from './globalStyles';
-import SignUpPage from './Pages/SignUpPage.js/SignUpPage.js';
+import RegisterPage from './Pages/SignUpPage.js/RegisterPage';
+import LoginPage from './Pages/LoginPage/LoginPage';
 
 function App() {
 	return (
 		<>
 			<GlobalStyles />
-			{/* <Navbar /> */}
-			<SignUpPage />
+			<Router>
+				<Routes>
+					<Route exec path='/login' element={<LoginPage />} />
+					<Route exec path='/register' element={<RegisterPage />} />
+					<Route
+						exec
+						path='/'
+						element={
+							<>
+								<Navbar />
+							</>
+						}
+					/>
+				</Routes>
+				{/* <Navbar /> */}
+			</Router>
 		</>
 	);
 }

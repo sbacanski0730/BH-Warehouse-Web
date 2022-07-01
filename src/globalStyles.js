@@ -15,7 +15,8 @@ const GlobalStyles = createGlobalStyle`
         font-size: 16px;
         outline: none;
         border: none;
-        font-family: 'Courier New', Courier, monospace;
+        /* font-family: 'Courier New', Courier, monospace; */
+        font-family: 'Montserrat', sans-serif;
     }
     *::after{
         box-sizing: border-box;
