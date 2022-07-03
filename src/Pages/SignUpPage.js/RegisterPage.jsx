@@ -1,6 +1,6 @@
 import React from 'react';
 import { StyledRegisterPage } from './RegisterPage.style.js';
-import Button from '../../components/Buttons/Button.js';
+// import Button from '../../components/Buttons/Button.js';
 
 const RegisterPage = () => {
 	return (
