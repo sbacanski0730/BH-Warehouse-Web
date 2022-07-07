@@ -66,7 +66,7 @@ const Navbar = () => {
 								onClick={closeMobileMenu}
 							>
 								<Link to='/'>
-									<button>Sign up</button>
+									<button>Logout</button>
 									{/* TODO: Create BUTTON Component */}
 								</Link>
 							</li>
