@@ -2,6 +2,7 @@ import styled from 'styled-components';
 import bg_beer from '../../assets/beer.jpg';
 
 export const StyledWelcomePage = styled.div`
+	padding: var(--main-padding);
 	height: 100vh;
 	background: url(${bg_beer});
 	background-repeat: no-repeat;
@@ -13,9 +14,7 @@ export const StyledWelcomePage = styled.div`
 	justify-content: center;
 
 	.wrapper {
-		/* border: 1px solid white; */
 		max-width: 37vw;
-		margin-left: 3rem;
 		padding: 1rem;
 
 		h1 {
@@ -30,6 +29,7 @@ export const StyledWelcomePage = styled.div`
 			font-weight: 200;
 		}
 
+		/* TODO: style chart */
 		#chart {
 			border: 1px solid white;
 		}

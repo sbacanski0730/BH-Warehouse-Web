@@ -70,8 +70,10 @@ export const StyledNavbar = styled.div`
 		}
 	}
 
-	.login-container {
+	.logout-container {
+		/* border: 1px solid red; */
 		#logout-button {
+			text-decoration: none;
 		}
 	}
 
@@ -127,7 +129,7 @@ export const StyledNavbar = styled.div`
 			}
 
 			.navbar-element {
-				/* border: 1px dashed var(--main-color); */
+				border: 1px dashed var(--main-color);
 
 				width: 100%;
 				display: flex;
@@ -139,7 +141,6 @@ export const StyledNavbar = styled.div`
 			}
 
 			.link {
-				/* border: 1px dashed white; */
 			}
 
 			.navbar-element:hover {
@@ -156,17 +157,28 @@ export const StyledNavbar = styled.div`
 			.navbar-element span {
 			}
 
-			.navbar-element#logout-button {
+			/* TODO: Coś przycist Logout w mobilemenu nie chce działać - zestylować*/
+			#logout-button {
 				display: flex;
+				/* align-items: center; */
+				/* justify-content: center; */
+				padding: 0;
+
+				.link {
+					display: flex;
+					align-items: center;
+					justify-content: center;
+					width: 100%;
+					height: 100%;
+
+					border: 1px solid white;
+					padding: 0;
+				}
 			}
 		}
 
 		.logout-container {
-			border: 1px solid white;
-			height: 100%;
 			display: none;
-			#logout-button {
-			}
 		}
 	}
 `;

@@ -6,6 +6,7 @@ const GlobalStyles = createGlobalStyle`
         --black:#13131a;
         --bg:#010103;
         --border:.1rem solid rgba(255,255,255,.3);
+        --main-padding: 0 7%
     }
 
     *, *::after, *::before{
@@ -30,7 +31,6 @@ const GlobalStyles = createGlobalStyle`
 
     body {
         background-color: var(--bg);
-        /* min-height: 100vh; */
     }
 
 `;

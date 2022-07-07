@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { StyledNavbar } from './Navbar.style.js';
 import icon from '../../assets/beer-outline-white.png';
 import { FaBars, FaTimes } from 'react-icons/fa';
+import Button from '../Button/Button';
 
 const Navbar = () => {
 	const [isMobileMenuActive, setIsMobileMenuActive] = useState(false);
@@ -60,21 +61,26 @@ const Navbar = () => {
 									<span>Order List</span>
 								</Link>
 							</li>
+							{/* Seeable only in mobile menu mode \/ */}
 							<li
 								className='navbar-element'
 								id='logout-button'
 								onClick={closeMobileMenu}
 							>
-								<Link to='/'>
-									<button>Logout</button>
-									{/* TODO: Create BUTTON Component */}
+								<Link to='/' className='link'>
+									<Button
+										btn_style={'btn-no-border'}
+										btn_size={'btn-wide'}
+									>
+										Logout
+									</Button>
 								</Link>
 							</li>
 						</ul>
 					</div>
 					<div className='logout-container'>
 						<Link to='/' id='logout-button'>
-							<button>Logout</button>
+							<Button>Logout</Button>
 						</Link>
 					</div>
 				</div>
