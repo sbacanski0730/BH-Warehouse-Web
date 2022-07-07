@@ -51,7 +51,7 @@ export const StyledNavbar = styled.div`
 			padding: 0.5rem 0.1rem;
 		}
 
-		#signup-button {
+		#logout-button {
 			display: none;
 		}
 
@@ -71,7 +71,7 @@ export const StyledNavbar = styled.div`
 	}
 
 	.login-container {
-		#signup-button {
+		#logout-button {
 		}
 	}
 
@@ -156,7 +156,7 @@ export const StyledNavbar = styled.div`
 			.navbar-element span {
 			}
 
-			.navbar-element#signup-button {
+			.navbar-element#logout-button {
 				display: flex;
 			}
 		}
@@ -165,7 +165,7 @@ export const StyledNavbar = styled.div`
 			border: 1px solid white;
 			height: 100%;
 			display: none;
-			#signup-button {
+			#logout-button {
 			}
 		}
 	}
