@@ -7,14 +7,35 @@ export const StyledWelcomePage = styled.div`
 	background: url(${bg_beer});
 	background-repeat: no-repeat;
 	background-size: fill;
-	background-position: 0% 28%;
+	background-position: 0% 22%;
 
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 
+	@media screen and (min-width: 1350px) {
+		.wrapper {
+			max-width: 580px;
+		}
+	}
+
+	@media screen and (max-width: 1350px) {
+		.wrapper {
+			max-width: 580px;
+		}
+	}
+
+	@media screen and (max-width: 960px) {
+		background-position: 7% 22%;
+
+		.wrapper {
+			max-width: 550px;
+		}
+	}
+
 	.wrapper {
-		max-width: 37vw;
+		border: 1px dashed white;
+
 		padding: 1rem;
 
 		h1 {
@@ -25,13 +46,27 @@ export const StyledWelcomePage = styled.div`
 		}
 		p {
 			color: #fff;
-			font-size: 1.2rem;
+			font-size: 1.4rem;
 			font-weight: 200;
 		}
 
 		/* TODO: style chart */
 		#chart {
 			border: 1px solid white;
+			margin-top: 1rem;
+		}
+	}
+
+	@media screen and (max-width: 780px) {
+		background: none;
+		display: flex;
+		align-items: center;
+		/* justify-content: flex-start; */
+		padding: 0;
+
+		.wrapper {
+			max-width: 700px;
+			padding: 1.5rem;
 		}
 	}
 `;
