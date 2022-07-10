@@ -3,7 +3,7 @@ import Navbar from './components/Navbar/Navbar';
 import GlobalStyles from './globalStyles';
 import RegisterPage from './Pages/SignUpPage.js/RegisterPage';
 import LoginPage from './Pages/LoginPage/LoginPage';
-import WelcomePage from './Pages/Home/WelcomePage.jsx';
+import WelcomePage from './Pages/WelcomePage/WelcomePage.jsx';
 import ProductsPage from './Pages/Products/ProductsPage';
 
 function App() {

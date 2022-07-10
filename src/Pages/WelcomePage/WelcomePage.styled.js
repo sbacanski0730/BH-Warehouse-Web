@@ -3,6 +3,7 @@ import bg_beer from '../../assets/beer.jpg';
 
 export const StyledWelcomePage = styled.div`
 	padding: var(--main-padding);
+
 	height: 100vh;
 	background: url(${bg_beer});
 	background-repeat: no-repeat;
@@ -13,29 +14,10 @@ export const StyledWelcomePage = styled.div`
 	flex-direction: column;
 	justify-content: center;
 
-	@media screen and (min-width: 1350px) {
-		.wrapper {
-			max-width: 580px;
-		}
-	}
-
-	@media screen and (max-width: 1350px) {
-		.wrapper {
-			max-width: 580px;
-		}
-	}
-
-	@media screen and (max-width: 960px) {
-		background-position: 7% 22%;
-
-		.wrapper {
-			max-width: 550px;
-		}
-	}
-
 	.wrapper {
-		border: 1px dashed white;
+		/* border: 1px dashed white; */
 
+		max-width: 580px;
 		padding: 1rem;
 
 		h1 {
@@ -54,19 +36,24 @@ export const StyledWelcomePage = styled.div`
 		#chart {
 			border: 1px solid white;
 			margin-top: 1rem;
+			height: 12rem;
+		}
+	}
+
+	@media screen and (max-width: 960px) {
+		background-position: 7% 22%;
+
+		.wrapper {
+			max-width: 550px;
+
+			h1 {
+				font-size: 2.8rem;
+			}
 		}
 	}
 
 	@media screen and (max-width: 780px) {
 		background: none;
-		display: flex;
 		align-items: center;
-		/* justify-content: flex-start; */
-		padding: 0;
-
-		.wrapper {
-			max-width: 700px;
-			padding: 1.5rem;
-		}
 	}
 `;
