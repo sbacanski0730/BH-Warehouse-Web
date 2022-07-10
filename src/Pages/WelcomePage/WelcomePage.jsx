@@ -1,6 +1,5 @@
 import React from 'react';
 import { StyledWelcomePage } from './WelcomePage.styled';
-import beer_image from '../../assets/beer.jpg';
 
 const Home = () => {
 	return (
