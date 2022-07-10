@@ -1,9 +1,7 @@
 import styled from 'styled-components';
 
 export const StyledNavbar = styled.div`
-	/* border: 1px solid white; */
 	background-color: var(--bg);
-
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -71,38 +69,25 @@ export const StyledNavbar = styled.div`
 	}
 
 	.logout-container {
-		/* border: 1px solid red; */
 		#logout-button {
 			text-decoration: none;
 		}
 	}
 
 	@media screen and (max-width: 960px) {
-		.wrapper {
-			/* border: 1px solid var(--main-color); */
-		}
-		.icon {
-			img {
-			}
-		}
-
 		.mobile-menu-container {
 			display: flex;
 			#mobile-menu-icon {
 				color: #fff;
 				font-size: 2.2rem;
 			}
-		}
 
-		.mobile-menu-container:hover {
-			display: flex;
-
-			cursor: pointer;
+			&:hover {
+				cursor: pointer;
+			}
 		}
 
 		.navbar-container {
-			/* border: 1px solid white; */
-
 			position: absolute;
 			top: 6rem;
 			left: -100%;
@@ -119,9 +104,6 @@ export const StyledNavbar = styled.div`
 
 		.navbar-container {
 			ul {
-				/* border: 1px dashed var(--main-color); */
-
-				width: 100%;
 				height: 100%;
 				flex-direction: column;
 				align-items: center;
@@ -129,8 +111,6 @@ export const StyledNavbar = styled.div`
 			}
 
 			.navbar-element {
-				border: 1px dashed var(--main-color);
-
 				width: 100%;
 				display: flex;
 				align-items: center;
@@ -138,41 +118,35 @@ export const StyledNavbar = styled.div`
 				flex: 1;
 				margin: 0;
 				max-height: 4rem;
-			}
+				border: none;
 
-			.link {
-			}
+				&:hover {
+					cursor: pointer;
+					background-color: var(--main-color);
+					transition: all 0.4s ease;
+					border: none;
 
-			.navbar-element:hover {
-				transition: all 0.3s ease;
-				cursor: pointer;
-				background-color: var(--main-color);
-				span {
-					transition: all 0.1s ease;
-					font-size: 1.5rem;
-					color: var(--bg);
+					span {
+						transition: all 0.4s ease;
+						font-size: 1.5rem;
+						color: var(--bg);
+					}
 				}
 			}
 
-			.navbar-element span {
-			}
-
-			/* TODO: Coś przycist Logout w mobilemenu nie chce działać - zestylować*/
 			#logout-button {
 				display: flex;
-				/* align-items: center; */
-				/* justify-content: center; */
+				width: 100%;
+				height: 100%;
 				padding: 0;
 
 				.link {
-					display: flex;
-					align-items: center;
-					justify-content: center;
 					width: 100%;
 					height: 100%;
+				}
 
-					border: 1px solid white;
-					padding: 0;
+				&:hover {
+					background: none;
 				}
 			}
 		}

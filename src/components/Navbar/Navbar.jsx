@@ -63,7 +63,7 @@ const Navbar = () => {
 							</li>
 							{/* Seeable only in mobile menu mode \/ */}
 							<li
-								className='navbar-element'
+								className='navbar-element '
 								id='logout-button'
 								onClick={closeMobileMenu}
 							>
@@ -74,12 +74,13 @@ const Navbar = () => {
 									>
 										Logout
 									</Button>
+									{/* <button>Logout</button> */}
 								</Link>
 							</li>
 						</ul>
 					</div>
 					<div className='logout-container'>
-						<Link to='/' id='logout-button'>
+						<Link to='/'>
 							<Button>Logout</Button>
 						</Link>
 					</div>

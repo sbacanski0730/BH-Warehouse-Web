@@ -1,16 +1,19 @@
 import styled from 'styled-components';
 
 export const StyledButton = styled.div`
+	display: inline;
+
 	.btn {
-		background-color: purple;
 		border: none;
 		outline: none;
 		/* text-align: center; */
+
+		&:hover {
+			cursor: pointer;
+		}
 	}
 
-	.btn:hover {
-		cursor: pointer;
-	}
+	/* Button STYLES */
 
 	.btn-default {
 		background-color: var(--main-color);
@@ -26,19 +29,25 @@ export const StyledButton = styled.div`
 	}
 
 	.btn-no-border {
-		border: 1px dotted yellow;
-
 		background-color: var(--main-color);
 		color: var(--bg);
 	}
 
+	/* Button SIZES */
 	.btn-normal {
 		font-size: 1.2rem;
 		padding: 0.5rem 1.1rem;
 	}
 
 	.btn-wide {
+		font-size: 1.2rem;
 		width: 100%;
 		height: 100%;
+		transition: all 0.3s ease;
+
+		&:hover {
+			font-size: 1.6rem;
+			letter-spacing: 2px;
+		}
 	}
 `;
