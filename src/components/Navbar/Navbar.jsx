@@ -67,7 +67,7 @@ const Navbar = () => {
 									handleClickOnElement(2);
 								}}
 							>
-								<Link to='/' className='link'>
+								<Link to='/products' className='link'>
 									<span>Products</span>
 								</Link>
 							</li>

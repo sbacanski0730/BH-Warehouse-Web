@@ -4,21 +4,12 @@ import GlobalStyles from './globalStyles';
 import RegisterPage from './Pages/SignUpPage.js/RegisterPage';
 import LoginPage from './Pages/LoginPage/LoginPage';
 import WelcomePage from './Pages/WelcomePage/WelcomePage.jsx';
-import ProductsPage from './Pages/Products/ProductsPage';
+import ProductsPage from './Pages/ProductsPage/ProductsPage';
 
 function App() {
 	return (
 		<>
 			<GlobalStyles />
-			{/* <Router>
-				<Navbar />
-				<Routes>
-					<Route exec path='/login' element={<LoginPage />} />
-					<Route exec path='/register' element={<RegisterPage />} />
-					<Route exec path='/' element={<WelcomePage />} />
-					<Route exec path='/' element={<WelcomePage />} />
-				</Routes>
-			</Router> */}
 			<Router>
 				<Routes>
 					<Route exec path='/login' element={<LoginPage />} />
@@ -26,9 +17,10 @@ function App() {
 				</Routes>
 			</Router>
 			<Router>
-				<Navbar />
+				{/* <Navbar /> */}
 				<Routes>
 					<Route exec path='/' element={<WelcomePage />} />
+					<Route exec path='/products' element={<ProductsPage />} />
 				</Routes>
 			</Router>
 		</>
