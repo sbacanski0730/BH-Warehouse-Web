@@ -47,6 +47,7 @@ export const StyledNavbar = styled.div`
 			list-style: none;
 			margin: 1rem;
 			padding: 0.5rem 0.1rem;
+			transition: all 0.1s linear;
 		}
 
 		#logout-button {
@@ -59,6 +60,10 @@ export const StyledNavbar = styled.div`
 
 		.navbar-element:hover {
 			cursor: pointer;
+			border-bottom: 1px solid var(--main-color);
+		}
+
+		.navbar-element.active {
 			border-bottom: 1px solid var(--main-color);
 		}
 

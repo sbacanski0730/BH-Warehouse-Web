@@ -7,9 +7,17 @@ import Button from '../Button/Button';
 
 const Navbar = () => {
 	const [isMobileMenuActive, setIsMobileMenuActive] = useState(false);
+	const [activeNavbarElement, setActiveNavbarElement] = useState(1);
 
 	const handleMobileMenuIcon = () => setIsMobileMenuActive(!isMobileMenuActive);
 	const closeMobileMenu = () => setIsMobileMenuActive(false);
+
+	const checkActiveElement = num => {
+		if (activeNavbarElement === num) {
+			return 'active';
+		}
+	};
+	const handleClickOnElement = num => setActiveNavbarElement(num);
 
 	return (
 		<>
@@ -41,22 +49,46 @@ const Navbar = () => {
 						}
 					>
 						<ul>
-							<li className='navbar-element' onClick={closeMobileMenu}>
+							<li
+								className={`navbar-element ${checkActiveElement(1)}`}
+								onClick={() => {
+									closeMobileMenu();
+									handleClickOnElement(1);
+								}}
+							>
 								<Link to='/' className='link'>
 									<span>Home</span>
 								</Link>
 							</li>
-							<li className='navbar-element' onClick={closeMobileMenu}>
+							<li
+								className={`navbar-element ${checkActiveElement(2)}`}
+								onClick={() => {
+									closeMobileMenu();
+									handleClickOnElement(2);
+								}}
+							>
 								<Link to='/' className='link'>
 									<span>Products</span>
 								</Link>
 							</li>
-							<li className='navbar-element' onClick={closeMobileMenu}>
+							<li
+								className={`navbar-element ${checkActiveElement(3)}`}
+								onClick={() => {
+									closeMobileMenu();
+									handleClickOnElement(3);
+								}}
+							>
 								<Link to='/' className='link'>
 									<span>Add</span>
 								</Link>
 							</li>
-							<li className='navbar-element' onClick={closeMobileMenu}>
+							<li
+								className={`navbar-element ${checkActiveElement(4)}`}
+								onClick={() => {
+									closeMobileMenu();
+									handleClickOnElement(4);
+								}}
+							>
 								<Link to='/' className='link'>
 									<span>Order List</span>
 								</Link>
@@ -74,7 +106,6 @@ const Navbar = () => {
 									>
 										Logout
 									</Button>
-									{/* <button>Logout</button> */}
 								</Link>
 							</li>
 						</ul>
