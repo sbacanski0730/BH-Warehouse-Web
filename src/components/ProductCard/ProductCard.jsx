@@ -2,32 +2,43 @@ import React from 'react';
 import { StyledProductCard } from './ProductCard.style';
 import beer_photo from '../../assets/default_beer_1.jpg';
 
-const ProductCard = () => {
+const ProductCard = ({
+	name,
+	addedDate,
+	expirationDate,
+	type,
+	description,
+	photoLink,
+}) => {
+	const leftDays = expirationDate => {
+		let today = new Date(),
+			expDate = new Date(expirationDate),
+			day = 24 * 60 * 60 * 1000;
+
+		return Math.round(Math.abs((expDate - today) / day));
+	};
+
 	return (
 		<StyledProductCard>
-			<img src={beer_photo} alt='Some beer photo' />
+			<img src={photoLink ? photoLink : beer_photo} alt='Some beer photo' />
 			<div className='info'>
-				<h1>Product name</h1>
-				{/* Ilość dni do końca terminu ważności */}
+				<h1>{name}</h1>
 				<p>
-					Pozostało dni: <span>34</span>
+					Days left: <span>{leftDays(expirationDate)}</span>
 				</p>
 			</div>
-			<div className='hover-info'>
-				{/* Nazwa produktu */}
-				<h1>ProductName</h1>
-				{/* Typ productu */}
+			<div className='hover'>
+				<h1>{name}</h1>
 				<p>
-					Type: <span>Słód</span>
+					Type: <span>{type}</span>
 				</p>
-				{/* Data ważności productu */}
 				<p>
-					Data ważności: <span>24.11.2022</span>
+					Expiration date: <span>{expirationDate}</span>
 				</p>
-				{/* Data wprowadzenia productu */}
 				<p>
-					Data wprowadzenia: <span>23.10.2022</span>
+					Added date: <span>{addedDate}</span>
 				</p>
+				<p className='description'>{description}</p>
 			</div>
 		</StyledProductCard>
 	);
