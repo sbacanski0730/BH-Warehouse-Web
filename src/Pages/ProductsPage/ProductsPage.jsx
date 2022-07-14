@@ -9,8 +9,6 @@ const ProductsPage = () => {
 				<h1 id='heading'>Your Products</h1>
 				<div className='container'>
 					<ProductCard />
-					<ProductCard />
-					<ProductCard />
 				</div>
 			</StyledProductsPage>
 		</>
