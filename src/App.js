@@ -5,6 +5,7 @@ import RegisterPage from './Pages/SignUpPage.js/RegisterPage';
 import LoginPage from './Pages/LoginPage/LoginPage';
 import WelcomePage from './Pages/WelcomePage/WelcomePage.jsx';
 import ProductsPage from './Pages/ProductsPage/ProductsPage';
+import AddProductPage from './Pages/AddProductPage/AddProductPage';
 
 function App() {
 	return (
@@ -20,7 +21,10 @@ function App() {
 				<Navbar />
 				<Routes>
 					<Route exec path='/' element={<WelcomePage />} />
+
 					<Route exec path='/products' element={<ProductsPage />} />
+
+					<Route exec path='/add-product' element={<AddProductPage />} />
 				</Routes>
 			</Router>
 		</>

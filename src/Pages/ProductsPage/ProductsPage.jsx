@@ -1,7 +1,6 @@
 import React from 'react';
 import { StyledProductsPage } from './ProductsPage.styled';
 import ProductCard from '../../components/ProductCard/ProductCard';
-import beer_photo from '../../assets/default_beer_1.jpg';
 
 const ProductsPage = () => {
 	return (
