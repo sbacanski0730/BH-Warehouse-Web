@@ -1,20 +1,23 @@
 import styled from 'styled-components';
 
+// TODO: naprawić podkreślenie pod aktywną stroną, tak aby nie występowało w trybie mobilnym
+
 export const StyledNavbar = styled.div`
 	background-color: var(--bg);
 	display: flex;
 	flex-direction: row;
 	align-items: center;
 	justify-content: center;
-	position: fixed;
-	width: 100vw;
+	position: sticky;
+	max-width: 100vw;
 	user-select: none;
 	background: var(-bg);
 	border-bottom: 1px solid var(--main-color);
+	max-height: 6rem;
+	z-index: 99;
 
 	.wrapper {
 		width: 100%;
-		max-height: 6rem;
 		display: flex;
 		flex-direction: row;
 		align-items: center;

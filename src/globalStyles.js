@@ -15,6 +15,7 @@ const GlobalStyles = createGlobalStyle`
         padding: 0;
         font-size: 16px;
         outline: none;
+        outline: none;
         border: none;
         font-family: 'Lato', sans-serif;
     }
@@ -31,6 +32,20 @@ const GlobalStyles = createGlobalStyle`
 
     body {
         background-color: var(--bg);
+    }
+
+    #page-heading {
+        max-width: 100%;
+        color: #fff;
+        text-align: center;
+        font-size: 3rem;
+        padding: 0.6rem 0;
+        margin-bottom: 0.4rem;
+
+        span {
+            color: var(--main-color);
+            font-size: 3rem;
+        }
     }
 
 `;

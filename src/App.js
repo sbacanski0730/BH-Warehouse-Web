@@ -17,7 +17,7 @@ function App() {
 				</Routes>
 			</Router>
 			<Router>
-				{/* <Navbar /> */}
+				<Navbar />
 				<Routes>
 					<Route exec path='/' element={<WelcomePage />} />
 					<Route exec path='/products' element={<ProductsPage />} />
