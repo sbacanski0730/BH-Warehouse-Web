@@ -4,13 +4,17 @@ import Button from '../../components/Button/Button';
 
 const AddProductPage = () => {
 	const [name, setName] = useState('');
-	const [type, setType] = useState('');
+	const [type, setType] = useState('malt');
 	const [expDate, setExpDate] = useState('');
 	const [description, setDescription] = useState('');
 	const [photoLink, setPhotoLink] = useState('');
 
 	const handleClick = e => {
-		console.log(type);
+		e.preventDefault();
+		console.log('name: ', name);
+		console.log('expDate: ', expDate);
+		console.log('description: ', description);
+		console.log('type: ', type);
 	};
 
 	return (
@@ -21,15 +25,17 @@ const AddProductPage = () => {
 				</h1>
 
 				<form>
-					{/* TODO: poprawić i przemieścić 'input' od wybierania typów; przestylować */}
-					{/* TODO: sprawdzic jak wyciagnac dane z wybranego elementu z tagu select */}
 					<div className='inputBox'>
-						<input type='text' placeholder='name' />
+						<input
+							type='text'
+							placeholder='name'
+							onChange={e => setName(e.target.value)}
+						/>
 					</div>
+
 					<div className='inputBox'>
 						<select
-							placeholder='choose value'
-							value={type}
+							defaultValue={type}
 							onChange={e => setType(e.target.value)}
 						>
 							<option value='malt'>malt</option>
@@ -41,21 +47,33 @@ const AddProductPage = () => {
 					</div>
 
 					<div className='inputBox'>
-						<input type='text' placeholder='expiration date' />
+						<input
+							type='date'
+							onChange={e => {
+								setExpDate(e.target.value);
+							}}
+						/>
 					</div>
 					<div className='inputBox'>
-						<input type='text' placeholder='description' />
+						<input
+							type='url'
+							placeholder='photo Link'
+							onChange={e => setPhotoLink(e.target.value)}
+						/>
 					</div>
 					<div className='inputBox'>
-						{/* TODO: przerobic komponent button tak, aby animacja :hover była osobnym atrybutem - default = none animation */}
-						{/* <Button btn_style='btn-default' btn_size='btn-normal'>
-							Add
-						</Button> */}
+						<textarea
+							id='description'
+							placeholder='description'
+							onChange={e => setDescription(e.target.value)}
+						></textarea>
 					</div>
-					{/* <Button btn_style='btn-default' btn_size='btn-wide'>
+					{/* TODO: przerobic komponent button tak, aby animacja :hover była osobnym atrybutem - default = none animation */}
+
+					<Button btn_style='btn-default' btn_size='btn-wide'>
 						Add
-					</Button> */}
-					<button onClick={handleClick}>Dodaj</button>
+					</Button>
+					{/* <button onClick={handleClick}>Dodaj</button> */}
 				</form>
 			</div>
 		</StyledAddProductPage>
