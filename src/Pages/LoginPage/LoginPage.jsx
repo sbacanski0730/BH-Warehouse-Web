@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyledLogin } from './LoginPage.styles';
+import { Link } from 'react-router-dom';
 
 const LoginPage = () => {
 	return (
@@ -15,11 +16,10 @@ const LoginPage = () => {
 							<label>Password</label>
 							<input type='password' placeholder='Password' />
 						</div>
-						<button className='form-element'>Sign Up</button>
-						{/* <div className='form-element button'>Sign Up</div> */}
+						<button className='form-element'>Sign In</button>
 						<div className='form-element login-page-link'>
-							<p>Have you got account? </p>
-							<span>Login NOW</span>
+							<p>Don't you have an account? </p>
+							<Link to='/register'>Register NOW</Link>
 						</div>
 					</form>
 				</div>

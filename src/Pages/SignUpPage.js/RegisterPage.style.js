@@ -1,11 +1,11 @@
 import styled from 'styled-components';
 
 export const StyledRegisterPage = styled.div`
-	/* border: 1xp solid white; */
+	/* TODO: add responsiveness to this component */
 	.box-container {
+		/* border: 1px solid white; */
 		height: 100vh;
 		display: flex;
-		flex-direction: row;
 		align-items: center;
 		justify-content: center;
 	}
@@ -36,10 +36,14 @@ export const StyledRegisterPage = styled.div`
 			color: white;
 			font-size: 1.7rem;
 			font-weight: 600;
+			letter-spacing: 1px;
+			transition: all 0.3s ease;
+			margin-top: 1.3rem;
 		}
 		button:hover {
 			background-color: #ca9c64;
 			cursor: pointer;
+			letter-spacing: 2px;
 		}
 		button:active {
 			background-color: #ca9c64;
@@ -53,13 +57,13 @@ export const StyledRegisterPage = styled.div`
 		flex-direction: column;
 		justify-content: center;
 		align-items: flex-start;
-		padding: 1rem 0;
+		padding: 0.6rem 0;
 		label {
 			width: 100%;
 			color: white;
-			font-size: 1.7rem;
-			padding: 0 0.4rem;
-			padding-bottom: 0.2rem;
+			font-size: 1.5rem;
+			padding-left: 0.5rem;
+			margin-bottom: 0.4rem;
 		}
 		input {
 			border: 1px solid var(--main-color);
@@ -82,16 +86,21 @@ export const StyledRegisterPage = styled.div`
 		justify-content: flex-end;
 
 		padding: 0.2rem 0;
+		margin-top: 0.3rem;
 
 		p {
 			color: white;
 			cursor: default;
 		}
-		span {
+
+		a {
+			text-decoration: none;
 			color: var(--main-color);
-		}
-		span:hover {
-			cursor: pointer;
+			margin-left: 10px;
+
+			&:hover {
+				cursor: pointer;
+			}
 		}
 	}
 `;
