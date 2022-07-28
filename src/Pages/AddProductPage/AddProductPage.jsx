@@ -73,7 +73,6 @@ const AddProductPage = () => {
 					<Button btn_style='btn-default' btn_size='btn-wide'>
 						Add
 					</Button>
-					{/* <button onClick={handleClick}>Dodaj</button> */}
 				</form>
 			</div>
 		</StyledAddProductPage>

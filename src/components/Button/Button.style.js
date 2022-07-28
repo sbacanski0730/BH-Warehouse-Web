@@ -44,7 +44,13 @@ export const StyledButton = styled.div`
 		width: 100%;
 		height: 100%;
 		transition: all 0.3s ease;
+	}
 
+	.hover-default {
+		/* no hover effect */
+	}
+
+	.hover-font-increase {
 		&:hover {
 			font-size: 1.6rem;
 			letter-spacing: 2px;
