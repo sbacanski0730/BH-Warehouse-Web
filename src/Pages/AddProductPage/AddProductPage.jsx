@@ -15,6 +15,7 @@ const AddProductPage = () => {
 		console.log('expDate: ', expDate);
 		console.log('description: ', description);
 		console.log('type: ', type);
+		console.log('photoLink: ', photoLink);
 	};
 
 	return (
@@ -70,7 +71,10 @@ const AddProductPage = () => {
 					</div>
 					{/* TODO: przerobic komponent button tak, aby animacja :hover była osobnym atrybutem - default = none animation */}
 
-					<Button btn_style='btn-default' btn_size='btn-wide'>
+					<Button
+						btn_style='btn-default'
+						btn_size='btn-wide'
+					>
 						Add
 					</Button>
 				</form>
