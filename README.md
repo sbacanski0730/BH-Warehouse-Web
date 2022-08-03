@@ -10,6 +10,8 @@
 
 -   [x] hover effect on product element
 -   [ ] Web-API connection
+    -   [ ] adding login/register
+    -   [ ] adding methods to manage products
 -   [ ] creating context for Web
 -   [ ] changes in routing for register/login page and home page
 
@@ -65,7 +67,7 @@ After logging in or registering, the user can manage the status of his products 
 
 #### **Home Page**
 
-W białym prostokęcie będzie zawarty wykres ze statystyką
+The graph with the statistics will be contained in the white rectangle.
 
 # ![Home Page](https://user-images.githubusercontent.com/72625642/182656665-b5fcdd74-796d-448a-99bb-812e3de615d1.png)
 
