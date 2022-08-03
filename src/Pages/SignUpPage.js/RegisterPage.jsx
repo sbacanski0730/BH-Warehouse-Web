@@ -1,5 +1,6 @@
 import React from 'react';
 import { StyledRegisterPage } from './RegisterPage.style.js';
+import { Link } from 'react-router-dom';
 // import Button from '../../components/Buttons/Button.js';
 
 const RegisterPage = () => {
@@ -21,10 +22,9 @@ const RegisterPage = () => {
 							<input type='password' placeholder='Repeat Password' />
 						</div>
 						<button className='form-element'>Sign Up</button>
-						{/* <div className='form-element button'>Sign Up</div> */}
 						<div className='form-element login-page-link'>
 							<p>Have you got account? </p>
-							<span>Login NOW</span>
+							<Link to='/login'>Login NOW</Link>
 						</div>
 					</form>
 				</div>
