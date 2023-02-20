@@ -1,4 +1,5 @@
 # BH-Warehouse Project
+> **Project suspendend**
 
 > This repository is Frontend part of the project
 > <br>
